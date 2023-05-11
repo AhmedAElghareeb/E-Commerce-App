@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/models/product.dart';
-import 'package:e_commerce/screens/user/homepage.dart';
 import 'package:e_commerce/services/store.dart';
 import 'package:flutter/material.dart';
 
@@ -83,10 +82,10 @@ class OrderDetail extends StatelessWidget
                           {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text("Your Order Is Confirmed and Is Being Reviewed"),
+                                content: Text("Order Is Confirmed"),
                               ),
                             );
-                            Navigator.popAndPushNamed(context, HomePage.id);
+                            Navigator.pop(context);
                           },
                           child: Text("Confirm Order"),
                           color: kMainColor,
